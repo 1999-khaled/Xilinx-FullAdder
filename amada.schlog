@@ -1,0 +1,40 @@
+select figure at 1910 1898 8 -branches -sn=1
+select figure at 1902 1878 8 -branches -sn=1
+select figure at 1888 1854 8 -branches -sn=1
+select figure at 1892 1882 8 -branches -sn=1
+select figure at 1860 1872 8 -branches -sn=1
+select figure at 1876 1882 8 -branches -sn=1
+select figure at 2079 1840 8 -branches -sn=1
+select figure at 1858 1826 8 -branches -sn=1
+select figure at 1824 1870 8 -branches -sn=1
+select figure at 1868 1828 8 -branches -sn=1
+select figure at 1874 1822 8 -branches -sn=1
+move branchpt at 1872 1824 to 1840 1824 -keepConn -sn=1
+select figure at 1798 1832 8 -branches -sn=1
+select figure at 1804 1830 8 -branches -sn=1
+select all in 1804 1830 1850 1848 -branches -enclosed -sn=1
+select figure at 1808 1751 8 -branches -sn=1
+select all in 1808 1751 1886 1862 -branches -enclosed -sn=1
+select figure at 1886 1862 8 -branches -sn=1
+delete selection -sn=1
+select figure at 1745 1874 8 -branches -sn=1
+add autowire 2192 1760 2096 1792 8 -sn=1
+add autowire 1984 1792 2192 1824 8 -sn=1
+undo
+undo
+select figure at 2234 1754 8 -branches -sn=1
+select figure at 2142 1785 8 -branches -sn=1
+add autowire 2224 1760 2128 1776 8 -sn=1
+undo
+add autowire 2240 1776 2000 1856 8 -sn=1
+undo
+add autowire 1936 1840 2112 1728 8 -sn=1
+undo
+undo
+undo
+select figure at 2235 1758 8 -branches -sn=1
+add autowire 2240 1776 2192 1760 8 -sn=1
+undo
+select figure at 2203 1731 8 -branches -sn=1
+select figure at 2230 1755 8 -branches -sn=1
+add autowire 2240 1760 1776 1872 8 -sn=1

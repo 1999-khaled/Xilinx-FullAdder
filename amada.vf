@@ -1,0 +1,56 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : amada.vf
+// /___/   /\     Timestamp : 10/24/2019 20:27:01
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog D:/KZ/fulladder/amada.vf -w D:/KZ/fulladder/amada.sch
+//Design Name: amada
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module amada(A, 
+             B, 
+             C, 
+             CARRY, 
+             SUM);
+
+    input A;
+    input B;
+    input C;
+   output CARRY;
+   output SUM;
+   
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_15;
+   
+   XOR3  XLXI_1 (.I0(C), 
+                .I1(B), 
+                .I2(A), 
+                .O(SUM));
+   AND2  XLXI_2 (.I0(B), 
+                .I1(A), 
+                .O(XLXN_7));
+   AND2  XLXI_3 (.I0(C), 
+                .I1(B), 
+                .O(XLXN_8));
+   AND2  XLXI_4 (.I0(C), 
+                .I1(A), 
+                .O(XLXN_15));
+   OR3  XLXI_6 (.I0(XLXN_15), 
+               .I1(XLXN_8), 
+               .I2(XLXN_7), 
+               .O(CARRY));
+endmodule

@@ -1,0 +1,89 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : FULLADDER.vf
+// /___/   /\     Timestamp : 10/24/2019 20:32:37
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family artix7 -verilog D:/KZ/fulladder/FULLADDER.vf -w D:/KZ/fulladder/FULLADDER.sch
+//Design Name: FULLADDER
+//Device: artix7
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module amada_MUSER_FULLADDER(A, 
+                             B, 
+                             C, 
+                             CARRY, 
+                             SUM);
+
+    input A;
+    input B;
+    input C;
+   output CARRY;
+   output SUM;
+   
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_15;
+   
+   XOR3  XLXI_1 (.I0(C), 
+                .I1(B), 
+                .I2(A), 
+                .O(SUM));
+   AND2  XLXI_2 (.I0(B), 
+                .I1(A), 
+                .O(XLXN_7));
+   AND2  XLXI_3 (.I0(C), 
+                .I1(B), 
+                .O(XLXN_8));
+   AND2  XLXI_4 (.I0(C), 
+                .I1(A), 
+                .O(XLXN_15));
+   OR3  XLXI_6 (.I0(XLXN_15), 
+               .I1(XLXN_8), 
+               .I2(XLXN_7), 
+               .O(CARRY));
+endmodule
+`timescale 1ns / 1ps
+
+module FULLADDER(A0, 
+                 A1, 
+                 B0, 
+                 B1, 
+                 C0, 
+                 C1, 
+                 S0, 
+                 S1);
+
+    input A0;
+    input A1;
+    input B0;
+    input B1;
+    input C0;
+   output C1;
+   output S0;
+   output S1;
+   
+   wire XLXN_6;
+   
+   amada_MUSER_FULLADDER  XLXI_1 (.A(A0), 
+                                 .B(B0), 
+                                 .C(C0), 
+                                 .CARRY(XLXN_6), 
+                                 .SUM(S0));
+   amada_MUSER_FULLADDER  XLXI_2 (.A(A1), 
+                                 .B(B1), 
+                                 .C(XLXN_6), 
+                                 .CARRY(C1), 
+                                 .SUM(S1));
+endmodule

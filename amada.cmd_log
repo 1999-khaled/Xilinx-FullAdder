@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/KZ/fulladder/amada.xst" -ofn "D:/KZ/fulladder/amada.syr" 

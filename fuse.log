@@ -1,0 +1,13 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o D:/KZ/fulladder/FULLADDER_FULLADDER_sch_tb_isim_beh.exe -prj D:/KZ/fulladder/FULLADDER_FULLADDER_sch_tb_beh.prj work.FULLADDER_FULLADDER_sch_tb work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/KZ/fulladder/amada.vf" into library work
+Analyzing Verilog file "D:/KZ/fulladder/FULLADDER.vf" into library work
+Analyzing Verilog file "D:/KZ/fulladder/FULL.v" into library work
+ERROR:HDLCompiler:806 - "D:/KZ/fulladder/FULL.v" Line 48: Syntax error near "initial".
+ERROR:HDLCompiler:806 - "D:/KZ/fulladder/FULL.v" Line 55: Syntax error near "initial".
+ERROR:HDLCompiler:806 - "D:/KZ/fulladder/FULL.v" Line 62: Syntax error near "initial".
+ERROR:HDLCompiler:806 - "D:/KZ/fulladder/FULL.v" Line 71: Syntax error near "endmodule".
+Verilog file D:/KZ/fulladder/FULL.v ignored due to errors
